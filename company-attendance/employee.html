@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Employee Management</title>
+
+<link rel="stylesheet" href="css/style.css">
+
+<style>
+
+.container{
+    width:90%;
+    margin:auto;
+    padding:30px;
+}
+
+.form-box{
+    background:white;
+    padding:25px;
+    border-radius:10px;
+    box-shadow:0 5px 15px rgba(0,0,0,.2);
+    margin-bottom:30px;
+}
+
+.form-group{
+    margin-bottom:15px;
+}
+
+label{
+    font-weight:bold;
+    display:block;
+    margin-bottom:5px;
+}
+
+input,select{
+    width:100%;
+    padding:10px;
+    border:1px solid #ccc;
+    border-radius:5px;
+}
+
+button{
+    background:#0d6efd;
+    color:white;
+    padding:12px 20px;
+    border:none;
+    border-radius:5px;
+    cursor:pointer;
+}
+
+button:hover{
+    background:#084298;
+}
+
+table{
+    width:100%;
+    border-collapse:collapse;
+    background:white;
+    box-shadow:0 5px 15px rgba(0,0,0,.2);
+}
+
+table th{
+    background:#0d6efd;
+    color:white;
+    padding:12px;
+}
+
+table td{
+    border:1px solid #ddd;
+    padding:10px;
+    text-align:center;
+}
+
+.edit{
+    background:green;
+    color:white;
+    padding:6px 10px;
+    text-decoration:none;
+    border-radius:5px;
+}
+
+.delete{
+    background:red;
+    color:white;
+    padding:6px 10px;
+    text-decoration:none;
+    border-radius:5px;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header>
+
+<div class="logo">
+<h2>ABC Company</h2>
+</div>
+
+<nav>
+<ul>
+<li><a href="dashboard.html">Dashboard</a></li>
+<li><a href="attendance.html">Attendance</a></li>
+<li><a href="employee.html">Employees</a></li>
+<li><a href="login.html">Logout</a></li>
+</ul>
+</nav>
+
+</header>
+
+<div class="container">
+
+<h2>Employee Management</h2>
+
+<div class="form-box">
+
+<form>
+
+<div class="form-group">
+<label>Employee ID</label>
+<input type="text" placeholder="EMP001">
+</div>
+
+<div class="form-group">
+<label>Employee Name</label>
+<input type="text" placeholder="Enter Employee Name">
+</div>
+
+<div class="form-group">
+<label>Department</label>
+<select>
+<option>HR</option>
+<option>Finance</option>
+<option>Sales</option>
+<option>IT</option>
+<option>Marketing</option>
+</select>
+</div>
+
+<div class="form-group">
+<label>Phone Number</label>
+<input type="text" placeholder="9876543210">
+</div>
+
+<div class="form-group">
+<label>Email</label>
+<input type="email" placeholder="employee@gmail.com">
+</div>
+
+<div class="form-group">
+<label>Joining Date</label>
+<input type="date">
+</div>
+
+<button type="submit">Add Employee</button>
+
+</form>
+
+</div>
+
+<h2>Employee List</h2>
+
+<table>
+
+<tr>
+<th>ID</th>
+<th>Name</th>
+<th>Department</th>
+<th>Phone</th>
+<th>Email</th>
+<th>Joining Date</th>
+<th>Action</th>
+</tr>
+
+<tr>
+<td>EMP001</td>
+<td>John</td>
+<td>IT</td>
+<td>9876543210</td>
+<td>john@gmail.com</td>
+<td>01-07-2026</td>
+<td>
+<a href="#" class="edit">Edit</a>
+<a href="#" class="delete">Delete</a>
+</td>
+</tr>
+
+<tr>
+<td>EMP002</td>
+<td>Priya</td>
+<td>HR</td>
+<td>9123456780</td>
+<td>priya@gmail.com</td>
+<td>15-06-2026</td>
+<td>
+<a href="#" class="edit">Edit</a>
+<a href="#" class="delete">Delete</a>
+</td>
+</tr>
+
+<tr>
+<td>EMP003</td>
+<td>Rahul</td>
+<td>Finance</td>
+<td>9988776655</td>
+<td>rahul@gmail.com</td>
+<td>10-05-2026</td>
+<td>
+<a href="#" class="edit">Edit</a>
+<a href="#" class="delete">Delete</a>
+</td>
+</tr>
+
+</table>
+
+</div>
+
+<footer>
+<p>© 2026 ABC Company | Employee Attendance Management System</p>
+</footer>
+
+</body>
+</html>

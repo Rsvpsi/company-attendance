@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Attendance Reports</title>
+
+<link rel="stylesheet" href="css/style.css">
+
+<style>
+
+.container{
+    width:95%;
+    margin:auto;
+    padding:30px;
+}
+
+.report-summary{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:space-between;
+    margin-bottom:30px;
+}
+
+.summary-card{
+    width:220px;
+    background:#fff;
+    padding:20px;
+    text-align:center;
+    border-radius:10px;
+    box-shadow:0 5px 15px rgba(0,0,0,.2);
+    margin:10px;
+}
+
+.summary-card h2{
+    color:#0d6efd;
+}
+
+.filter-box{
+    background:#fff;
+    padding:20px;
+    border-radius:10px;
+    box-shadow:0 5px 15px rgba(0,0,0,.2);
+    margin-bottom:25px;
+}
+
+.filter-box input,
+.filter-box select{
+    padding:10px;
+    margin:10px;
+}
+
+button{
+    background:#0d6efd;
+    color:white;
+    border:none;
+    padding:10px 20px;
+    border-radius:5px;
+    cursor:pointer;
+}
+
+button:hover{
+    background:#084298;
+}
+
+table{
+    width:100%;
+    border-collapse:collapse;
+    background:#fff;
+    box-shadow:0 5px 15px rgba(0,0,0,.2);
+}
+
+table th{
+    background:#0d6efd;
+    color:white;
+    padding:12px;
+}
+
+table td{
+    border:1px solid #ddd;
+    padding:10px;
+    text-align:center;
+}
+
+.present{
+    color:green;
+    font-weight:bold;
+}
+
+.absent{
+    color:red;
+    font-weight:bold;
+}
+
+.leave{
+    color:orange;
+    font-weight:bold;
+}
+
+.weekoff{
+    color:blue;
+    font-weight:bold;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header>
+
+<div class="logo">
+<h2>ABC Company</h2>
+</div>
+
+<nav>
+<ul>
+<li><a href="dashboard.html">Dashboard</a></li>
+<li><a href="employee.html">Employees</a></li>
+<li><a href="attendance.html">Attendance</a></li>
+<li><a href="leave.html">Leave</a></li>
+<li><a href="report.html">Reports</a></li>
+<li><a href="login.html">Logout</a></li>
+</ul>
+</nav>
+
+</header>
+
+<div class="container">
+
+<h1>Attendance Report</h1>
+
+<div class="report-summary">
+
+<div class="summary-card">
+<h2>150</h2>
+<p>Total Employees</p>
+</div>
+
+<div class="summary-card">
+<h2>132</h2>
+<p>Present</p>
+</div>
+
+<div class="summary-card">
+<h2>8</h2>
+<p>Leave</p>
+</div>
+
+<div class="summary-card">
+<h2>10</h2>
+<p>Absent</p>
+</div>
+
+<div class="summary-card">
+<h2>5</h2>
+<p>Weekly Off</p>
+</div>
+
+</div>
+
+<div class="filter-box">
+
+<label>Select Report Date:</label>
+<input type="date">
+
+<label>Department:</label>
+
+<select>
+<option>All</option>
+<option>HR</option>
+<option>IT</option>
+<option>Finance</option>
+<option>Marketing</option>
+<option>Sales</option>
+</select>
+
+<button>Search</button>
+
+<button onclick="window.print()">Print Report</button>
+
+</div>
+
+<table>
+
+<tr>
+<th>Employee ID</th>
+<th>Name</th>
+<th>Department</th>
+<th>Date</th>
+<th>Status</th>
+</tr>
+
+<tr>
+<td>EMP001</td>
+<td>John</td>
+<td>IT</td>
+<td>01-08-2026</td>
+<td class="present">Present</td>
+</tr>
+
+<tr>
+<td>EMP002</td>
+<td>Priya</td>
+<td>HR</td>
+<td>01-08-2026</td>
+<td class="leave">Leave</td>
+</tr>
+
+<tr>
+<td>EMP003</td>
+<td>Rahul</td>
+<td>Finance</td>
+<td>01-08-2026</td>
+<td class="absent">Absent</td>
+</tr>
+
+<tr>
+<td>EMP004</td>
+<td>Anita</td>
+<td>Sales</td>
+<td>01-08-2026</td>
+<td class="weekoff">Weekly Off</td>
+</tr>
+
+</table>
+
+</div>
+
+<footer>
+<p>© 2026 ABC Company | Employee Attendance Management System</p>
+</footer>
+
+</body>
+</html>

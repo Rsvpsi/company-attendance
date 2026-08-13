@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Leave Management</title>
+
+<link rel="stylesheet" href="css/style.css">
+
+<style>
+
+.container{
+    width:90%;
+    margin:auto;
+    padding:30px;
+}
+
+.form-box{
+    background:#fff;
+    padding:25px;
+    border-radius:10px;
+    box-shadow:0 5px 15px rgba(0,0,0,0.2);
+    margin-bottom:30px;
+}
+
+.form-group{
+    margin-bottom:15px;
+}
+
+label{
+    display:block;
+    font-weight:bold;
+    margin-bottom:5px;
+}
+
+input,select,textarea{
+    width:100%;
+    padding:10px;
+    border:1px solid #ccc;
+    border-radius:5px;
+}
+
+textarea{
+    resize:none;
+}
+
+button{
+    background:#0d6efd;
+    color:white;
+    padding:12px 20px;
+    border:none;
+    border-radius:5px;
+    cursor:pointer;
+}
+
+button:hover{
+    background:#084298;
+}
+
+table{
+    width:100%;
+    border-collapse:collapse;
+    background:white;
+    box-shadow:0 5px 15px rgba(0,0,0,.2);
+}
+
+table th{
+    background:#0d6efd;
+    color:white;
+    padding:12px;
+}
+
+table td{
+    border:1px solid #ddd;
+    padding:10px;
+    text-align:center;
+}
+
+.pending{
+    color:orange;
+    font-weight:bold;
+}
+
+.approved{
+    color:green;
+    font-weight:bold;
+}
+
+.rejected{
+    color:red;
+    font-weight:bold;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header>
+
+<div class="logo">
+<h2>ABC Company</h2>
+</div>
+
+<nav>
+<ul>
+<li><a href="dashboard.html">Dashboard</a></li>
+<li><a href="employee.html">Employees</a></li>
+<li><a href="attendance.html">Attendance</a></li>
+<li><a href="leave.html">Leave</a></li>
+<li><a href="login.html">Logout</a></li>
+</ul>
+</nav>
+
+</header>
+
+<div class="container">
+
+<h2>Leave Request Form</h2>
+
+<div class="form-box">
+
+<form>
+
+<div class="form-group">
+<label>Employee ID</label>
+<input type="text" placeholder="EMP001" required>
+</div>
+
+<div class="form-group">
+<label>Employee Name</label>
+<input type="text" placeholder="John" required>
+</div>
+
+<div class="form-group">
+<label>Leave Type</label>
+<select required>
+<option>Casual Leave</option>
+<option>Sick Leave</option>
+<option>Paid Leave</option>
+<option>Emergency Leave</option>
+</select>
+</div>
+
+<div class="form-group">
+<label>From Date</label>
+<input type="date" required>
+</div>
+
+<div class="form-group">
+<label>To Date</label>
+<input type="date" required>
+</div>
+
+<div class="form-group">
+<label>Reason</label>
+<textarea rows="4" placeholder="Enter reason for leave"></textarea>
+</div>
+
+<button type="submit">Submit Leave Request</button>
+
+</form>
+
+</div>
+
+<h2>Leave Request Status</h2>
+
+<table>
+
+<tr>
+<th>Employee ID</th>
+<th>Name</th>
+<th>Leave Type</th>
+<th>From</th>
+<th>To</th>
+<th>Status</th>
+</tr>
+
+<tr>
+<td>EMP001</td>
+<td>John</td>
+<td>Sick Leave</td>
+<td>01-08-2026</td>
+<td>02-08-2026</td>
+<td class="approved">Approved</td>
+</tr>
+
+<tr>
+<td>EMP002</td>
+<td>Priya</td>
+<td>Casual Leave</td>
+<td>05-08-2026</td>
+<td>05-08-2026</td>
+<td class="pending">Pending</td>
+</tr>
+
+<tr>
+<td>EMP003</td>
+<td>Rahul</td>
+<td>Emergency Leave</td>
+<td>10-08-2026</td>
+<td>12-08-2026</td>
+<td class="rejected">Rejected</td>
+</tr>
+
+</table>
+
+</div>
+
+<footer>
+<p>© 2026 ABC Company | Employee Attendance Management System</p>
+</footer>
+
+</body>
+</html>
